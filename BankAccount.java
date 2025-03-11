@@ -9,9 +9,9 @@ public class BankAccount {
 
 //    constructor
     public BankAccount(String bankHolderName, int accountNumber){
-        this.bankHolderName = bankHolderName;
-        this.accountNumber = accountNumber;
-        totalCounts++;
+            this.bankHolderName = bankHolderName;
+            this.accountNumber = accountNumber;
+            totalCounts++;
     }
 
 //    printing totalCounts for all the accounts
@@ -20,11 +20,13 @@ public class BankAccount {
     }
 
     public void bankDetails(){
-        System.out.println("==== Bank Details are as follows ====");
-        System.out.println("BankName: " + bankName);
-        System.out.println("BankHolder Name: " + bankHolderName);
-        System.out.println("AccountNumber: " + accountNumber);
-        System.out.println("Total count till now " + totalCounts);
+        if(this instanceof BankAccount){
+            System.out.println("==== Bank Details are as follows ====");
+            System.out.println("BankName: " + bankName);
+            System.out.println("BankHolder Name: " + bankHolderName);
+            System.out.println("AccountNumber: " + accountNumber);
+            System.out.println("Total count till now " + totalCounts);
+        }
     }
 
     public static void main(String[] args) {
